@@ -29,8 +29,14 @@ int main(void){
 		button_in.get(in_a);
 		CLK_IN.get(in_b);
 
-		led_out << ( in_a & in_b);
-
+		// led_out << ( in_a & in_b);
+		if (in_a && in_b){
+		
+			led_out << 1;
+		}
+		else {
+			led_out << 0;
+		}
 
 		cout << in_a << endl;
 		cout << in_b << endl;
