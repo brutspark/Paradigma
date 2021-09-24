@@ -1,0 +1,21 @@
+f = open("led_ldr.ino", "w")
+f.write("const int led = 13;        // LED connected tro digital pin 13\n")
+f.write("const int sensorPin = 0;   // connect sensor to analog input 0\n")
+f.write("\n")
+f.write("void setup {\n")
+f.write("pinMode(led, OUTPUT);      // enable output on the LED pin\n")
+f.write("}\n")
+f.write("\n")
+f.write("void loop(){\n")
+f.write("int rate = analogRead(sensorPin);  // read the analog input\n")
+f.write("digitalWrite(ledPin, HIGH);        // set the LED on\n")
+f.write("delay(rate);                       // wait duration dependent on light level\n")
+f.write("digitalWrite(ledPin, LOW);         // set the LED off\n")
+f.write("delay(rate);\n")
+f.write("}\n")
+f.close()
+
+# open and read the file after the appending:
+#f = open("led_blink.ino", "r")
+#print(f.read())
+
